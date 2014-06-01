@@ -7,10 +7,11 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
+    # Examples: #has to be in order when it comes to views
     url(r'^$', 'signups.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^thank-you/$', 'signups.views.thankyou', name='thankyou'),
+    url(r'^about-us/$', 'signups.views.aboutus', name='aboutus'),
     url(r'^admin/', include(admin.site.urls)),
 )
 
