@@ -87,3 +87,11 @@ TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(BASE_DIR), "src", "static", "templates"),
     #'/Users/htm/Documents/Git Projects/mvp_landing-Django/pursuit/src/static/templates',
     )
+
+if DEBUG:
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "src", "static", "static-only")
+    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "src", "static", "media")
+    STATICFILES_DIRS = (
+        os.path.join(os.path.dirname(BASE_DIR), "src", "static", "static")
+        )
