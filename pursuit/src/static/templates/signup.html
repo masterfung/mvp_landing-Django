@@ -1,13 +1,44 @@
 {% extends 'base.html' %}
 
+{% block jumbotron %}
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Putin Berry Rocks!!</h1>
+        <p>The mystery of Putin Berry ends today. You no longer have to go outside looking confused. Click the learn more button to begin this undertaking. Are you ready?</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+{% endblock %}
+
 
 {% block content %}
-<h1>Sign Up Today!</h1>
 
-<form method='POST' action=''> {% csrf_token %}
-	{{form.as_p}}
+	<div class="col-md-3">
+	  <h2>Origin</h2>
+	  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	</div>
+	<div class="col-md-3">
+	  <h2>Services</h2>
+	  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+	  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	</div>
+	<div class="col-lg-3">
+	  <h2>Why Us?</h2>
+	  <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+	  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	</div>
+	<div class="col-lg-3 signups">
+		<h1>Sign Up Today!</h1>
 
-	<input type="submit" class='btn btn-success btn-block'>
-</form>
+		<form method='POST' action=''> {% csrf_token %}
+			{{form.as_p}}
+
+			<input type="submit" class='btn btn-success btn-block'>
+		</form>
+	</div>
 
 {% endblock %}
